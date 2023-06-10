@@ -39,4 +39,4 @@ def times_tables_game(smallest_number = 2, largest_number = 9, drum_roll_time = 
 
 
 
-times_tables_game(2,9, drum_roll_time = 1.5, speed_up_factor = 1.2)
+times_tables_game(2,9, drum_roll_time = 5.5, speed_up_factor = 1.2)
