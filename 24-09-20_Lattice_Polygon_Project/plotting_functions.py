@@ -24,3 +24,6 @@ def plot_polygons(biggest_n: int, vertex_rule = lambda n: [(0,0), (n,0), (n,n), 
     
     # Plot Squares
     create_plots(vertex_rule=vertex_rule, biggest_n=biggest_n, number_of_columns=number_of_columns, axes=axes)
+
+def plot_polygon(*vertices):
+    return plot_polygons(biggest_n=1, vertex_rule=lambda n: list(vertices))

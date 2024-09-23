@@ -124,10 +124,10 @@ def is_between(point: tuple, endpoint_1: tuple, endpoint_2: tuple)->bool:
     if not rise_1 * run_2 == rise_2 * run_1: 
         return False
     
-    if not (x_min <= point[0]) and (point[0] <= x_max):
+    if not ((x_min <= point[0]) and (point[0] <= x_max)):
         return False
     
-    if not (y_min <= point[1]) and (point[1] <= y_max):
+    if not ((y_min <= point[1]) and (point[1] <= y_max)):
         return False
     
     return True
