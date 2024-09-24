@@ -32,9 +32,13 @@ def create_plots(vertex_rule, biggest_n, number_of_columns, axes):
             draw_polygon(*vertex_rule(square_size), axes = axes[row_index, column_index])
             # axes[row_index, column_index].fill([0,n,n,0], [0,0,n,n])
 
+    x_min = min([min([vertex[0] for vertex in vertex_rule(n)]) for n in range(1, biggest_n + 1)])
+    x_max = max([max([vertex[0] for vertex in vertex_rule(n)]) for n in range(1, biggest_n + 1)])
+    y_min = min([min([vertex[1] for vertex in vertex_rule(n)]) for n in range(1, biggest_n + 1)])
+    y_max = max([max([vertex[1] for vertex in vertex_rule(n)]) for n in range(1, biggest_n + 1)])
 
-    plt.yticks(range(biggest_n + 1))
-    plt.xticks(range(biggest_n + 1))
+    plt.yticks(range(y_min, y_max + 1))
+    plt.xticks(range(x_min, x_max + 1))
 
     sns.despine()
 
